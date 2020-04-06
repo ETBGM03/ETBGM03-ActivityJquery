@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>Funciones</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num= prompt('ingrese un numero:')
+		num=parseInt(num);
+		var factor= function(num){
+			var fac=1;
+			for(num;num>0;num--)
+				fac= fac*num;
+			alert('el factorial del numero es: ' + ' ' + fac); 
+
+		}
+		
+		factor(num);
+	</script>
+</body>
+</html>
