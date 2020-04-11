@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Attr</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script >
+        
+            //el primer parametro es el nombre del atributo a cambiar y el segundo es el que nosotros le vamos a dar  y si el atributo no existe el mismo lo crea( no es necesario definirlo)
+            //removeAttr nos permitirá eliminar un atributo
+
+            //cuando nos encontramos con un metodo attr podemos implementar una funcion con el fin de poder devolver al valor que se a acceder (este nospermite hacer app mucho más dinámicas)
+/*
+            $('#prueba').attr('class', function(){
+                var cadena= 'hello world'
+                return cadena;
+            });
+            var clase=$('#prueba').attr('class')
+
+            alert(clase);
+        });*/
+
+
+        //aprenderemos hacer una pestaña nueva con el fin de mandar un alert que diga, que se está saliendo de la página
+        $(function() {
+            $('a').on('click', function(e) {
+                //nos servirá para que cuando un usuario haga clic en un enlace evita que se direccione (que se abra la otras pestaña) 
+                e.preventDefault();
+                var link = $(this).attr('href');
+                alert('Usted está saliendo de nuestro sitio web');
+                location.href = link;
+            });
+        });
+    </script>
+</head>
+<body>
+    
+    <a href="https://github.com/ETBGM03/ETBGM03-ActivityJquery"> página Github</a>
+   
+</body>
+</html>

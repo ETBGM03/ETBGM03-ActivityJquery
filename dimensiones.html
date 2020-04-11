@@ -4,8 +4,74 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dimensiones </title>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+	<script>
+		$(function(){
+			//este método regresa o establece el ancho de una elemento seleccionado
+			//el metodo width lo que no muestra es una entero
+			console.log($('header img').width(420))
+			//el console.log para el ejercicio !! no es necesario
+			//console.log($('#e01').height(80))
+			$('#e01').height(80);
+
+			//metodo psition, devuelve un ibjeto conteniendo informacion sobre el top y left de nuestro elemento
+			var posi= $('#e02 p').position();
+			console.log('position left: ' + posi.left + 'position top: '+ posi.top)
+
+			//hay otro método que nos permmite contar los bordes, el margen, el padding de los elementos que estan por encima de el
+			var posi= $('#e02 p').position();
+			var posi2= $('#e02 p').offset();
+			console.log('position left: ' + posi.left + 'position top: '+ posi.top)
+			console.log('position left: ' + posi2.left + 'position top: '+ posi2.top)
+		});
+	</script>
+
+	<style>
+		body, html{
+			background:aquamarine;
+			margin: 0;
+			padding: 0;
+
+
+		}
+
+		header{
+			display: block;
+			margin: 0 auto;
+			width: 365px;
+		}
+
+		#e01, #e02{
+			background: royalblue;
+			display: block;
+			height: 100px;
+			width: 400px;
+			margin: 20px auto;
+		}
+
+		#e01{
+			background: saddlebrown;
+			height: 180px;
+			width: 425px;
+		}
+		#e02{
+			padding: 15px;
+			border-radius: 60px 0px 60px 0px;
+		}
+		p{
+			margin-left: 10px;
+		}
+	</style>
 </head>
 <body>
-	
+	<header>
+		<img src="imagenes_galeria/imagen4.jpg" alt="">
+	</header>
+	<div id="e01"></div>
+	<div id="e02">
+		<p>¿Hola qué tal?</p>
+	</div>
 </body>
 </html>
