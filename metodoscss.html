@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<title>metodos Css</title>
+
+	<script>
+		//el metodo css nos peprmite agregar o modificar  propiedades de nuestros elementos de html
+
+		$(function(){
+			$('body, html').css('background, green');
+			//para agg más de una propiedad utilizaremos un objeto de json 
+			var ccsh1 = {
+				'text-align': 'center',
+				'color': 'green'
+				
+			}
+
+			$('h1').css(ccsh1);
+
+			var bg= $('item2').css('background');
+			var it2= $('#item2').css('color');
+				if (bg === it2) 
+					$('#item2').css('color', 'black');
+			
+			
+		})
+
+
+
+
+	</script>
+	<style >
+		body, html{
+			background: gray;
+			color: blue;
+			font-family: arial;
+			margin: 0;
+			padding: 0;
+			}
+			#item1{
+				background: yellow;
+				height: 50px;
+				margin: 5% auto;
+				width: 300px;
+			}
+			#item2{
+				display: block;
+				background: lightblue;
+				height: 50px;
+				margin: 5% auto;
+				width: 300px;
+			}
+		
+
+	</style>
+
+</head>
+<body>
+	<h1> mi titulo personal </h1>
+	<div id="item1">Item 1</div>
+	<div id="item2">Item 2</div>
+
+</body>
+</html>

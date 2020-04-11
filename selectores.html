@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>selectores jquery</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script>
+		//con esta podemos editar y seleccionar varios componentes y asi darles una pequeña modificacion
+		$(function(){
+			$('#parrafo, #parrafodos, span').text('!Hey¡, somos iguales, estamos aprendiendo jquery');
+		});
+
+		//de tal manera accedemos o seleccionamos un parrafo que a su vez está dentro de otros componentes
+		/*$(function(){
+			$('div.prueba article p').text('selectores avanzados')
+		});*/
+
+		//de esta manera podemos seleccionar dentro de un div una clase a la  cual le vaamos agregar en este caso un "resalto con el n color"
+
+	/*	$(function(){
+			$('div.prueba').css({
+			'background-color':'red'
+		});
+		});
+		*/
+		
+	</script>
+</head>
+<body>
+
+		<div class="prueba">
+			<article>
+				<p id="parrafo">Hola qué tal estás?</p>
+			</article>
+		</div>
+		<div >
+			<article>
+				<p id="parrafodos">Bien, aprendiendo jquery!</p>
+			</article>
+		</div>
+		<span></span>
+</body>
+</html>

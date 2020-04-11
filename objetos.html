@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+<title>Objetos</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var Esteban = new  persona('Esteban', 'gomez');
+		var person = new persona('Camilo')
+
+			function persona(nombre, apellido){
+				this.nombre = nombre;
+				this.apellido = apellido;
+				this.habla= function () {
+					alert(this.nombre + ' está hablando')
+				}
+
+			}
+			alert('el nombre de la persona es ' + Esteban.nombre);
+			alert('el apellido de la persona es ' + Esteban.apellido);
+			Esteban.habla();
+
+	</script>
+</body>
+</html>

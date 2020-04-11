@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<title>setter y getter</title>
+
+	<script>
+		//los metodos get son los que nos permiten obtener el valor de un atributo	o de una varaible, y los set para asignar valores. Pero en jquery podemos utilizar estos dos metodos tanto para obtener o asignar valores a una variable
+
+		//con el uso del metodo html, ingresamos valor al parrafo
+		/*$(function(){
+			 $('#parra').html('<strong> </> ni hao jquery');
+		});
+		*/
+
+		//guarrdaremos el valor de parrafo dentro de la variable y lo mostraremos
+		//si agregamos un texto dentro del metodo html cambiamos el valor de <p> por el que ingresemos en el metodo htmll
+		/*$(function(){
+			 var almacen = $('#parra').html('hola soy stef');
+			 alert(almacen);
+		});*/
+
+
+		//se utiliza el metodo atrr, nos permite llegar a los atributos de cualquier elemento, de tal manera que asignamos la clase "ejemplo" mediante el metodo attr
+		/*$(function(){
+			$('#prueba').attr('class', 'ejemplo ');
+			
+		});*/
+
+
+		//procedemos a utilizar un metod get, y transformaremos el metodo attr con el fin de obtener el elemento
+			$(function(){
+			var clase = $('#prueba').attr('id');
+				alert(clase);
+				//este metodo asigna un valor al elemento
+				$('#prueba').attr('class', 'ejemplo'); 
+			
+		});		
+	</script>
+
+
+
+</head>
+<body>
+	<p id="parra" > <strong>ni hao jquery</strong></p>
+	<div id="prueba"></div>
+</body>
+</html>

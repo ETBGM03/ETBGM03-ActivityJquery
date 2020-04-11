@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<title>selectores parte dos </title>
+
+	<script>
+
+	//como aplicar los selectores dentro de una variable, comprobar que el elemento seleccionado realmente exista y aplicar una metodologia con el fin de refinar o filtrar nuestras selecciones 
+		$(function(){
+			var selcec= $('.prueba');
+			//con el uso de condicionales podemos verificar la existencia de algo dentro del elemento o su en su defecto ese elemento existe.
+			if (selcec.length) 
+				alert('existen dos: ' + selcec.length);
+				else
+					alert('no existe nada');
+				
+				//utilzacion del metodo not, sirve para seleccionar un elemento la cual no exista 
+				//selcec.not('.stef').text('este elemento no tiene  la clase');
+
+
+				//se utiliza el metodo has (tenido) va a seleccionar pero todos aquellos que dentro del elemento mismo contenga otro elemento
+
+				//selcec.has('p').text('soy yo Esteban');
+
+				//metodo first en la que se implementará otra forma de hacer la seleccion
+
+				$('li').first().html('<strong/> soy el elemento uno')
+			
+
+			//con el metodo eq  podemos seleccionar el elemento que deseemos 
+			$('li').eq(2).text('soy el elemento dos!!!')
+		});
+	</script>
+</head>
+<body>
+
+	<div class="prueba">
+		<p></p>
+	</div>
+
+	<div class="prueba">
+		<span></span>
+	</div>
+	<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+	</ul>
+</body>
+</html>
